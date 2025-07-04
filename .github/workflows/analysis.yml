@@ -1,8 +1,8 @@
-name: Analyze Code for Special Characters
+name: Run Sample Action
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
   pull_request:
 
 jobs:
@@ -10,10 +10,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
+      - name: Checkout Code
         uses: actions/checkout@v3
 
       - name: Run Flutter Analyzer
-        uses: your-username/flutter-analyzer-action@v4   # <-- reference to your published action
+        uses: avirup171/sample-action@v4   # ✅ updated to v4
         with:
-          files: "lib/main.dart src/index.js"
+          files: "index.js"
