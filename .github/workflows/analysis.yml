@@ -1,0 +1,19 @@
+name: Analyze Code for Special Characters
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+
+jobs:
+  analyze:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Run Flutter Analyzer
+        uses: your-username/flutter-analyzer-action@v4   # <-- reference to your published action
+        with:
+          files: "lib/main.dart src/index.js"
