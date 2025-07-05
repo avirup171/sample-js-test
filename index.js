@@ -7,6 +7,6 @@ const normal = "Hello World"; // no special characters
 
 function greet() {
 
-  console.log('Hello world!');
+  console.log('Hello');
 }
 greet();
